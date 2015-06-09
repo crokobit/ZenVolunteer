@@ -1,7 +1,11 @@
-p = model.name
-p = model.age
-p = model.note
-p = link_to 'show', volunteer_path(model)
-p = link_to 'edit', edit_volunteer_path(model)
-p = link_to 'delete', volunteer_path(model), method: :delete
+.row
+  .col.s12.m6
+    .card.blue-grey.darken-1
+      .card-content.white-text
+        span.card-title = model.name + ' (' + model.age.to_s + ')'
+        p = model.note
+      .card-action
+        = link_to 'show', volunteer_path(model)
+        = link_to 'edit', edit_volunteer_path(model)
+        = link_to 'delete', volunteer_path(model), method: :delete
 

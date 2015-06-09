@@ -1,6 +1,6 @@
 class ZenPeriodForm < Reform::Form
-  property :start_datetime
-  property :end_datetime
+  property :start_date
+  property :end_date
   property :zen_type
   property :name
 end

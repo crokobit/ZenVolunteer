@@ -1,10 +1,18 @@
-=form_for(@form) do |f|
-  p == f.label :name
-  p == f.text_field :name
-  p == f.label :age
-  p == f.text_field :age
-  p == f.label :note
-  p == f.text_area :note
-  p == f.submit
-
-
+.row
+  = form_for(@form, html: { class: 'col s12' }) do |f|
+    .row
+      .input-field.col.s12
+        = f.label :name, class: 'active'
+        = f.text_field :name
+    .row
+      .input-field.col.s12
+        = f.label :age, class: 'active'
+        = f.text_field :age
+    .row
+      .input-field.col.s12
+        = f.label :note, class: 'active'
+        = f.text_area :note, class: 'materialize-textarea'
+    .row
+      button.btn.waves-effect.waves-light name="action" type="submit" 
+        | Submit
+        i.mdi-content-send.right

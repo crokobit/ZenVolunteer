@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 20150608131834) do
   end
 
   create_table "zen_periods", force: :cascade do |t|
-    t.datetime "start_datetime"
-    t.datetime "end_datetime"
+    t.date     "start_date"
+    t.date     "end_date"
     t.string   "name"
     t.string   "zen_type"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
