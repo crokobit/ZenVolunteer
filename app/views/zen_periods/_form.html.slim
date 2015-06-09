@@ -1,0 +1,11 @@
+=form_for(@form) do |f|
+  p == f.label :name
+  p == f.text_field :name
+  p == f.label :zen_type
+  p == f.text_field :zen_type
+  p == f.label :start_datetime
+  p == f.datetime_field :start_datetime
+  p == f.label :end_datetime
+  p == f.datetime_field :end_datetime
+  p == f.submit
+

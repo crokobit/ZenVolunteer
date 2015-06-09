@@ -1,5 +1,7 @@
-body
-  p = model.name
-  p = model.zen_type
-  p = model.start_datetime
-  p = model.end_datetime
+p = model.name
+p = model.zen_type
+p = model.start_datetime
+p = model.end_datetime
+p = link_to 'show', zen_period_path(model)
+p = link_to 'edit', edit_zen_period_path(model)
+p = link_to 'delete', zen_period_path(model), method: :delete
