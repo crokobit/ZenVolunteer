@@ -16,6 +16,10 @@
         = f.label :end_date, class: 'active'
         = f.date_field :end_date, class: 'datepicker'
     .row
+      .input-field.col.s12
+        = f.select :volunteer_ids, Volunteer.all.collect{ |volunteer| [volunteer.name, volunteer.id] }, {}, { multiple: true , class: 'basic-single' }
+    .row
       button.btn.waves-effect.waves-light name="action" type="submit" 
         | Submit
         i.mdi-content-send.right
+

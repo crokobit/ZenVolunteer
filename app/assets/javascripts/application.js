@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
+//= require select2
+
+
+$(document).ready(function() {
+  $(".basic-single").select2();
+});
