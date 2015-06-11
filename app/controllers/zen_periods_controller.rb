@@ -37,7 +37,9 @@ class ZenPeriodsController < ApplicationController
   
   def destroy
     @zen_period = ZenPeriod.find(params[:id])
+
     @zen_period.destroy
+
     redirect_to zen_periods_path
   end
 end
