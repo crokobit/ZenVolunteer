@@ -4,3 +4,33 @@
 .select2-container {
   width: 100% 
 }
+
+body {
+  background-color: #bdbdbd;
+}
+
+form {
+
+  background-color: #efebe9;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav {
+  background-color: #00796b;
+}
+
+.footer-div {
+  height: 56px;
+  width: 100%;
+  line-height: 56px;
+  background-color: #00796b;
+}
