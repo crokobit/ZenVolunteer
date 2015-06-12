@@ -19,7 +19,8 @@
       .input-field.col.s12
         = f.select :volunteer_ids, Volunteer.all.collect{ |volunteer| [volunteer.name, volunteer.id] }, {}, { multiple: true , class: 'basic-single' }
     .row
-      button.btn.waves-effect.waves-light name="action" type="submit" 
-        | Submit
-        i.mdi-content-send.right
+      .col.s12.m6.l3
+        button.btn.waves-effect.waves-light name="action" type="submit" 
+          | Submit
+          i.mdi-content-send.right
 
