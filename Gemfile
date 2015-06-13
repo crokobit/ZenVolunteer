@@ -40,6 +40,7 @@ gem 'cells'
 gem 'cells-slim'
 gem 'materialize-sass'
 gem 'select2-rails'
+gem 'foundation-icons-sass-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
