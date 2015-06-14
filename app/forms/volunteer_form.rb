@@ -6,4 +6,5 @@ class VolunteerForm < Reform::Form
   property :name
   property :age, type: Integer
   property :note
+  property :email
 end
