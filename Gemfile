@@ -41,6 +41,7 @@ gem 'cells-slim'
 gem 'materialize-sass'
 gem 'select2-rails'
 gem 'foundation-icons-sass-rails'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,5 +56,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
   gem 'awesome_print'
+  gem 'meta_request'
 end
 

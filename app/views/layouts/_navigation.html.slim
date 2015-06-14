@@ -3,4 +3,13 @@ nav
     ul#nav-mobile.left
       li = link_to 'Zen Period', zen_periods_path
       li = link_to 'Volunteer', volunteers_path
+    ul#nav-mobile.right
+      - if user_signed_in?
+        a.dropdown-button href="#" data-activates='dropdown1' = current_user.email
+        ul.dropdown-content#dropdown1
+          li = link_to 'edit account', edit_user_registration_path
+          li = link_to 'sign out', destroy_user_session_path, method: :delete
+      - else
+        li = link_to 'sign in', new_user_session_path
+
 
