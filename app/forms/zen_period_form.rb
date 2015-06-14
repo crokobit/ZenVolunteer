@@ -4,4 +4,5 @@ class ZenPeriodForm < Reform::Form
   property :zen_type
   property :name
   property :volunteer_ids
+  property :location
 end
