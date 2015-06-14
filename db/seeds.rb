@@ -3,8 +3,8 @@ User.create!([
 ])
 Volunteer.create!([
   {age: 27, name: "何泓毅", note: "WORK QQ", email: "crokobit@gmail.com"},
-  {age: 37, name: "李世隆", note: "GOOD", email: nil},
-  {age: 30, name: "林永在", note: "MONK", email: nil}
+  {age: 37, name: "李世隆", note: "GOOD", email: "crokobit@gmail.com"},
+  {age: 30, name: "林永在", note: "MONK", email: "crokobit@gmail.com"}
 ])
 ZenPeriod.create!([
   {start_date: "2015-06-04", end_date: "2015-06-11", name: "青年禪七", zen_type: "", location: "ddm_chan"},
