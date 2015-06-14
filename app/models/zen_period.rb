@@ -4,5 +4,5 @@ class ZenPeriod < ActiveRecord::Base
   has_many :zen_period_volunteer_relationships
   has_many :volunteers, through: :zen_period_volunteer_relationships
 
-  enumerize :location, in: [:ddm_chan, :tannan]
+  enumerize :location, in: [:ddm_chan, :tannan, :taitung]
 end
