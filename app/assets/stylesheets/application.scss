@@ -37,3 +37,19 @@ nav {
   margin-top:40px; 
   margin-bottom:40px; 
 }
+
+.social-list {
+  li {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+.clearfix:before,
+.clearfix:after {
+ content: " ";
+ display: table;
+}
+.clearfix:after {
+ clear: both;
+}

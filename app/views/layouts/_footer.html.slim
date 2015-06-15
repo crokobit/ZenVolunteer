@@ -1,6 +1,8 @@
 .footer-div
-  ul
+  ul.social-list
     li
-      i.fi-social-github.medium
+      = link_to 'https://github.com/crokobit/ZenVolunteer' do
+        i.fi-social-github.medium
     li
-      i.fi-social-mail.medium
+      = mail_to 'crokobit.ddm@gmail.com' do
+        i.fi-mail.medium

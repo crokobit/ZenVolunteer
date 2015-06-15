@@ -1,5 +1,4 @@
 User.create!([
-  {email: "crokobit@gmail.com", encrypted_password: "$2a$10$1E8IgONdwEBnPdomwXyPweH0gwzVNdL5jjNqNJj.9wy/HujCOKjqG", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: "2015-06-14 13:20:13", last_sign_in_at: "2015-06-14 13:01:50", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
 ])
 Volunteer.create!([
   {age: 27, name: "何泓毅", note: "WORK QQ", email: "crokobit@gmail.com"},
