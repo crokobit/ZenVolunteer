@@ -45,6 +45,7 @@ gem 'devise'
 gem 'enumerize'
 gem "rails-i18n"
 gem 'seed_dump'
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
