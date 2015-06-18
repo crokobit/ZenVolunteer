@@ -9,3 +9,9 @@
         = link_to 'detail', zen_period_path(model)
         = link_to 'edit', edit_zen_period_path(model)
         = link_to 'delete', zen_period_path(model), method: :delete
+        - if @current_user
+          - if @current_user.voted?(model)
+            = link_to 'cancel voted', cancel_vote_zen_period_path(model), remote: true, id: "vote-link-#{model.id}"
+          - else
+            = link_to 'vote!', vote_zen_period_path(model), remote: true, id: "vote-link-#{model.id}"
+

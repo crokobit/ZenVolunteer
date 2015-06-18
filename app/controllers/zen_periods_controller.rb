@@ -40,4 +40,20 @@ class ZenPeriodsController < ApplicationController
     @zen_period.destroy
     redirect_to zen_periods_path
   end
+
+  def vote
+    current_user.vote_zen_period(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def cancel_vote
+    Vote.find_by(zen_period_id: params[:id]).delete
+
+    respond_to do |format|
+      format.js
+    end
+  end
 end
