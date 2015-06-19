@@ -6,10 +6,11 @@
         p = model.zen_type
         p = model.start_date.strftime("%Y%m%d") + ' ~ ' + model.end_date.strftime("%Y%m%d")
       .card-action
-        = link_to 'detail', zen_period_path(model)
-        = link_to 'edit', edit_zen_period_path(model)
-        = link_to 'delete', zen_period_path(model), method: :delete
-        - if @current_user
+        - if can? :manage, ZenPeriod
+          = link_to 'detail', zen_period_path(model)
+          = link_to 'edit', edit_zen_period_path(model)
+          = link_to 'delete', zen_period_path(model), method: :delete
+        - if can? :manage, Vote
           - if @current_user.voted?(model)
             = link_to 'cancel voted', cancel_vote_zen_period_path(model), remote: true, id: "vote-link-#{model.id}"
           - else

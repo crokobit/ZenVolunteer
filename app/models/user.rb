@@ -13,4 +13,12 @@ class User < ActiveRecord::Base
   def vote_zen_period(zen_period_id)
     votes.create(zen_period_id: zen_period_id)
   end
+
+  def admin?
+    email == 'crokobit@gmail.com'
+  end
+
+  def normal_user?
+    !admin?
+  end
 end

@@ -1,8 +1,8 @@
 nav
   .nav-wrapper
     ul#nav-mobile.left
-      li = link_to 'Zen Period', zen_periods_path
-      li = link_to 'Volunteer', volunteers_path
+      li = link_to 'Zen Period', zen_periods_path if can? :read, ZenPeriod
+      li = link_to 'Volunteer', volunteers_path if can? :manage, Volunteer
     ul#nav-mobile.right
       - if user_signed_in?
         a.dropdown-button href="#" data-activates='dropdown1' = current_user.email

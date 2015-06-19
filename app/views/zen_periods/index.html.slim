@@ -1,5 +1,6 @@
-= link_to new_zen_period_path, class: 'waves-effect waves-light btn' do
-  i.mdi-file-cloud.left New
+- if can? :manage, ZenPeriod
+  = link_to new_zen_period_path, class: 'waves-effect waves-light btn' do
+    i.mdi-file-cloud.left New
 p
 p
 p
