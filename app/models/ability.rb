@@ -6,10 +6,9 @@ class Ability
     if user.admin?
       can :manage, ZenPeriod
       can :manage, Volunteer
-    elsif user.normal_user?
+    else
       can :manage, Vote
       can :read, ZenPeriod
-    else
     end
   end
 end

@@ -6,19 +6,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def voted?(zen_period)
-    votes.map(&:zen_period_id).include? zen_period.id
-  end
-
-  def vote_zen_period(zen_period_id)
-    votes.create(zen_period_id: zen_period_id)
-  end
-
   def admin?
     email == 'crokobit@gmail.com'
-  end
-
-  def normal_user?
-    !admin?
   end
 end

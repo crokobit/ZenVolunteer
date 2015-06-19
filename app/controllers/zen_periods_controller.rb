@@ -1,4 +1,5 @@
 class ZenPeriodsController < ApplicationController
+  before_action :set_volunteer, only: [:index, :vote, :cancel_vote]
   def index
     @zen_periods = ZenPeriod.all
   end
@@ -42,7 +43,7 @@ class ZenPeriodsController < ApplicationController
   end
 
   def vote
-    current_user.vote_zen_period(params[:id])
+    @volunteer.vote_zen_period(params[:id])
 
     respond_to do |format|
       format.js
@@ -50,10 +51,16 @@ class ZenPeriodsController < ApplicationController
   end
 
   def cancel_vote
-    Vote.find_by(zen_period_id: params[:id]).delete
+    @volunteer.votes.find_by(zen_period_id: params[:id]).delete
 
     respond_to do |format|
       format.js
     end
+  end
+
+  private
+
+  def set_volunteer
+    @volunteer = Volunteer.find(params[:volunteer_id]) if params[:volunteer_id]
   end
 end
