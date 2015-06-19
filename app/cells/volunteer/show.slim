@@ -2,8 +2,8 @@
   .col.s12.m12.l12
     .card.blue-grey.darken-1
       .card-content.white-text
-        span.card-title = model.name + ' (' + model.age.to_s + ')'
-        p = model.note
+        span.card-title = card_title
+        p = note
       .card-action
         = link_to 'show', volunteer_path(model)
         = link_to 'edit', edit_volunteer_path(model)
