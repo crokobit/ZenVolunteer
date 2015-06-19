@@ -1,0 +1,10 @@
+= link_to new_volunteer_path, class: 'waves-effect waves-light btn' do
+  i.mdi-file-cloud.left New
+p
+= link_to mail_all_volunteers_path, class: 'waves-effect waves-light btn' do
+  i.mdi-file-cloud.left Mail All
+p
+p
+p
+= cell(:volunteer, collection: @volunteers)
+

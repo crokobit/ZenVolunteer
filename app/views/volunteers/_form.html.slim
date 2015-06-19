@@ -1,0 +1,24 @@
+.row
+  = form_for(@form, html: { class: 'col s12' }) do |f|
+    .container
+      .row
+        .input-field.col.s12
+          = f.label :name, class: 'active'
+          = f.text_field :name
+      .row
+        .input-field.col.s12
+          = f.label :email, class: 'active'
+          = f.email_field :email
+      .row
+        .input-field.col.s12
+          = f.label :age, class: 'active'
+          = f.text_field :age
+      .row
+        .input-field.col.s12
+          = f.label :note, class: 'active'
+          = f.text_area :note, class: 'materialize-textarea'
+      .row
+        .col.s12.m6.l3
+          button.btn.waves-effect.waves-light name="action" type="submit" 
+            | Submit
+            i.mdi-content-send.right
