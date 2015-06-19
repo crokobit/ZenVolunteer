@@ -1,4 +1,6 @@
 class VolunteersController < ApplicationController
+  before_action :authorize!
+
   def index
     @volunteers = Volunteer.all
   end
@@ -62,5 +64,10 @@ class VolunteersController < ApplicationController
 
     flash[:motice] = 'Sended!'
     redirect_to volunteers_path
+  end
+
+  private
+  def authorize!
+    redirect_to root_path unless can? :manage, Volunteer
   end
 end

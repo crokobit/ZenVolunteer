@@ -1,5 +1,7 @@
 class ZenPeriodsController < ApplicationController
   before_action :set_volunteer, only: [:index, :vote, :cancel_vote]
+  before_action :authorize!, except: [:index, :vote, :cancel_vote]
+
   def index
     @zen_periods = ZenPeriod.all
   end
@@ -62,5 +64,9 @@ class ZenPeriodsController < ApplicationController
 
   def set_volunteer
     @volunteer = Volunteer.find(params[:volunteer_id]) if params[:volunteer_id]
+  end
+
+  def authorize!
+    redirect_to root_path unless can? :manage, Volunteer
   end
 end
