@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'index#index'
+  root 'zen_periods#index'
   resources :zen_periods do
     member do
       get 'vote', to: 'zen_periods#vote'
