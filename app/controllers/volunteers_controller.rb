@@ -44,4 +44,23 @@ class VolunteersController < ApplicationController
 
     redirect_to volunteers_path
   end
+
+  def mail
+    volunteer = Volunteer.find(params[:id])
+    VolunteerMailer.ask_for_voting_mail(volunteer)
+
+    flash[:motice] = 'Sended!'
+    redirect_to volunteers_path
+  end
+
+  def mail_all
+    volunteers = Volunteer.all
+
+    volunteers.each do |volunteer|
+      VolunteerMailer.ask_for_voting_mail(volunteer)
+    end
+
+    flash[:motice] = 'Sended!'
+    redirect_to volunteers_path
+  end
 end
