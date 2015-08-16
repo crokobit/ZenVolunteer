@@ -7,11 +7,11 @@
         p = duration
       - if @volunteer || current_user
         .card-action
-          - if can? :manage, ZenPeriod
+          - if (can? :manage, ZenPeriod) && @volunteer.nil?
             = link_to 'detail', zen_period_path(model)
             = link_to 'edit', edit_zen_period_path(model)
             = link_to 'delete', zen_period_path(model), method: :delete
-          - if can? :manage, Vote
+          - if (can? :manage, Vote) || @volunteer
             - if @volunteer && @volunteer.voted?(model)
               = link_to 'cancel voted', cancel_vote_zen_period_path(model, volunteer_id: @volunteer.id), remote: true, id: "vote-link-#{model.id}"
             - elsif @volunteer

@@ -1,2 +1,2 @@
 $('#vote-link-<%=params[:id]%>').text('vote!')
-$('#vote-link-<%=params[:id]%>').attr('href', '<%= vote_zen_period_path(params[:id]) %>')
+$('#vote-link-<%=params[:id]%>').attr('href', '<%= vote_zen_period_path(params[:id], volunteer_id: @volunteer.id) %>')
