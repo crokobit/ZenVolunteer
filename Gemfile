@@ -48,6 +48,8 @@ gem "rails-i18n"
 gem 'seed_dump'
 gem 'cancancan'
 gem 'rails_12factor', group: :production
+gem 'mailgun-ruby', '~>1.0.2', require: 'mailgun'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

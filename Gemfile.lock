@@ -80,16 +80,22 @@ GEM
     disposable (0.0.9)
       representable (~> 2.0)
       uber
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     enumerize (0.11.0)
       activesupport (>= 3.2)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.5.2)
+    figaro (1.1.1)
+      thor (~> 0.14)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     ice_nine (0.11.1)
     jbuilder (2.2.16)
@@ -104,6 +110,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mailgun-ruby (1.0.3)
+      json (~> 1.8)
+      rest-client (~> 1.6)
     materialize-sass (0.96.2)
       sass (~> 3.3)
     meta_request (0.3.4)
@@ -115,6 +124,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.0)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -178,6 +188,10 @@ GEM
       uber (~> 0.0.7)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.4.14)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -222,6 +236,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -247,9 +264,11 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   enumerize
+  figaro
   foundation-icons-sass-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mailgun-ruby (~> 1.0.2)
   materialize-sass
   meta_request
   pg

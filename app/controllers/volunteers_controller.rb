@@ -59,7 +59,7 @@ class VolunteersController < ApplicationController
     volunteers = Volunteer.all
 
     volunteers.each do |volunteer|
-      VolunteerMailer.ask_for_voting_mail(volunteer)
+      VolunteerMailer.ask_for_voting_mail(volunteer).delivery_now
     end
 
     flash[:motice] = 'Sended!'
