@@ -86,4 +86,5 @@ Rails.application.configure do
     :password       => ENV['password'],
     :authentication => :plain,
   }}
+  config.action_mailer.default_url_options = {:host => "tranquil-springs-3297.herokuapp.com"}
 end
