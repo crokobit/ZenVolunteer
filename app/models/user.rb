@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def admin?
-    email == 'crokobit@gmail.com'
+    true
   end
 end
