@@ -7,11 +7,7 @@
           = f.text_field :name
       .row
         .input-field.col.s12
-          = f.label :zen_type, class: 'active'
-          = f.text_field :zen_type
-      .row
-        .input-field.col.s12
-          = f.select :location, ZenPeriod.location.options
+          = f.select :location, ZenPeriod.location.options, {}, class: :select
           = f.label :location
       .row
         .input-field.col.s6
