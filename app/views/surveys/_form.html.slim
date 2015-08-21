@@ -1,0 +1,22 @@
+.row
+  = form_for([@volunteer, @survey], html: { class: 'col s12 l12' }) do |f|
+    .container
+      .row
+        .input-field.col.s12
+          = f.label :join_zen_period_count, class: 'active'
+          = f.number_field :join_zen_period_count
+      .row
+        .input-field.col.s12
+          = f.label :volunteer_count, class: 'active'
+          = f.number_field :volunteer_count
+      .row
+        .input-field.col.s12
+          = f.check_box :training
+          = f.label :training, class: 'active'
+      .row
+        .col.s12.m6.l6
+          button.btn.waves-effect.waves-light name="action" type="submit" 
+            | Submit
+            i.mdi-content-send.right
+
+

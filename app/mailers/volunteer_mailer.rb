@@ -8,7 +8,7 @@ class VolunteerMailer < ApplicationMailer
 
     text = %Q(
       請使用此連結登記能護之禪期
-      #{link_to 'Link', zen_periods_url(volunteer_id: @volunteer.id)}
+      #{link_to 'Link', new_volunteer_survey_url(@volunteer)}
     )
 
     message_params = {:from    => 'test@ddm.tw',
