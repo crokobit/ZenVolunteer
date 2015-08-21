@@ -5,7 +5,6 @@
         span.card-title = card_title
         p = note
       .card-action
-        = link_to 'show', volunteer_path(model)
         = link_to 'edit', edit_volunteer_path(model)
         = link_to 'delete', volunteer_path(model), method: :delete
 

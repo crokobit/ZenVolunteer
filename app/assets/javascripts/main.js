@@ -9,7 +9,7 @@ $(document).ready(function() {
       belowOrigin: true // Displays dropdown below the button
     }
   );
-  $('select').material_select();
+  $('.select').material_select();
 });
 
 

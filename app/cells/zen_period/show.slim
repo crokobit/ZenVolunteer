@@ -8,7 +8,6 @@
       - if @volunteer || current_user
         .card-action
           - if (can? :manage, ZenPeriod) && @volunteer.nil?
-            = link_to 'detail', zen_period_path(model)
             = link_to 'edit', edit_zen_period_path(model)
             = link_to 'delete', zen_period_path(model), method: :delete
           - if (can? :manage, Vote) || @volunteer
