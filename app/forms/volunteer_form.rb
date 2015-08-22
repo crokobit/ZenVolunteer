@@ -7,4 +7,10 @@ class VolunteerForm < Reform::Form
   property :age, type: Integer
   property :note
   property :email
+
+  property :survey do
+    property :join_zen_period_count
+    property :volunteer_count
+    property :training
+  end
 end

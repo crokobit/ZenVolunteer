@@ -17,6 +17,21 @@
         .input-field.col.s12
           = f.label :note, class: 'active'
           = f.text_area :note, class: 'materialize-textarea'
+    = f.fields_for :survey do |a|
+      .container
+        .row
+          .input-field.col.s12
+            = a.label :join_zen_period_count, class: 'active'
+            = a.number_field :join_zen_period_count
+        .row
+          .input-field.col.s12
+            = a.label :volunteer_count, class: 'active'
+            = a.number_field :volunteer_count
+        .row
+          .input-field.col.s12
+            = a.check_box :training
+            = a.label :training, class: 'active'
+    .container
       .row
         .col.s12.m6.l3
           button.btn.waves-effect.waves-light name="action" type="submit" 
