@@ -5,3 +5,21 @@
         ddm_chan: '禪堂'
         tannan: '天南寺'
         taitung: '信行寺'
+
+  helpers:
+    label:
+      survey:
+        join_zen_period_count: '參與過之禪期次數'
+        volunteer_count: '護過之禪期次數'
+        training: '是否參與過禪堂助理監香培訓'
+      volunteer:
+        name: '姓名'
+        email: 'Email'
+        age: '年齡'
+        note: '備註'
+      zen_period:
+        name: '禪期'
+        location: '地點'
+        start_date: '開始時間'
+        end_date: '結束時間'
+        volunteer_ids: '助理監香'
