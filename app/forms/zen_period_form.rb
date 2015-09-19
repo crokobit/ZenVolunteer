@@ -7,6 +7,6 @@ class ZenPeriodForm < Reform::Form
   property :location
 
   def voted_volunteer_option
-    Volunteer.includes(:votes).where(votes: { zen_period_id: id }).collect{ |volunteer| [volunteer.name, volunteer.id] }
+    Volunteer.includes(:votes).where(black_list: false, votes: { zen_period_id: id }).collect{ |volunteer| [volunteer.name, volunteer.id] }
   end
 end

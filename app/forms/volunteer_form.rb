@@ -7,6 +7,7 @@ class VolunteerForm < Reform::Form
   property :age, type: Integer
   property :note
   property :email
+  property :black_list
 
   property :survey do
     property :join_zen_period_count

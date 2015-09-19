@@ -17,6 +17,10 @@
         .input-field.col.s12
           = f.label :note, class: 'active'
           = f.text_area :note, class: 'materialize-textarea'
+      .row
+        .input-field.col.s12
+          = f.check_box :black_list
+          = f.label :black_list, class: 'active'
     = f.fields_for :survey do |a|
       .container
         .row
