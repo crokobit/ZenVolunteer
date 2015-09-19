@@ -17,6 +17,7 @@
         email: 'Email'
         age: '年齡'
         note: '備註'
+        black_list: '黑名單'
       zen_period:
         name: '禪期'
         location: '地點'
