@@ -14,4 +14,6 @@ class VolunteerForm < Reform::Form
     property :volunteer_count
     property :training
   end
+
+  validates :name, :age, :email, presence: true
 end
